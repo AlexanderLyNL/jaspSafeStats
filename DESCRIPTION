@@ -1,4 +1,4 @@
-Package: jaspModuleTemplate
+Package: jaspSafestats
 Type: Package
 Title: A module for JASP
 Version: 0.1.0
@@ -15,5 +15,6 @@ Imports:
 Suggests:
   testthat
 Remotes:
+  AlexanderLyNL/safestats@futility88,
   jasp-stats/jaspBase,
   jasp-stats/jaspGraphs
