@@ -1,27 +1,10 @@
 processTable <- function(jaspResults, dataset, options) {
 
-  variables     <- unlist(options[["dependent"]])
-  variableTypes <- options[["dependent.types"]]
+  ready <- (length(options$dependent) > 0)
 
-  scaleVariables    <- variables[variableTypes == "scale"]
-  nonScaleVariables <- variables[variableTypes != "scale"]
+  if (ready)
+    dataset <- oneSampleReadData(dataset, options)
 
-  mainTable <- createJaspTable(gettext("Analysis summary"))
-  mainTable$dependOn(c("dependent"))
-
-  if (length(scaleVariables)==0) {
-    expl <- createJaspHtml(text = "Drop variables into the right hand side")
-    expl$dependOn(c("dependent")) # Declare dependencies to make the object disappear / reappear when needed
-
-    jaspResults[["Explanation"]] <- expl
-    return()
-  }
-
-  for (var in scaleVariables) {
-    mainTable$addColumnInfo(name = gettext(var))
-
-    mainTable[[var]] <- dataset[[var]]
-
-    jaspResults[["mainTable"]] <- mainTable
-  }
+  if (is.null(jaspResults[["mainTable"]]))
+    oneSampleTTableMain(jaspResults, dataset, options, ready)
 }
