@@ -131,7 +131,7 @@
     },
     "RcppArmadillo": {
       "Package": "RcppArmadillo",
-      "Version": "15.2.3-1",
+      "Version": "15.2.2-1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -141,7 +141,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "180d6ae1fc15b124e1ea2ea95555d385"
+      "Hash": "5c37bad87c31c73cb6d6b904d42d1b5b"
     },
     "RcppEigen": {
       "Package": "RcppEigen",
@@ -158,7 +158,7 @@
     },
     "Rdpack": {
       "Package": "Rdpack",
-      "Version": "2.6.6",
+      "Version": "2.6.4",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -168,7 +168,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "9aafb16a721acbb1f793e7b9e26de471"
+      "Hash": "1b2ca1972e3b00cd0bb5a98e16403028"
     },
     "S7": {
       "Package": "S7",
@@ -194,6 +194,18 @@
         "utils"
       ],
       "Hash": "e78499cbcbbca98200254bd171379165"
+    },
+    "TTR": {
+      "Package": "TTR",
+      "Version": "0.24.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "curl",
+        "xts",
+        "zoo"
+      ],
+      "Hash": "1acd2b3db6e118dd161ee6cabedc4d4e"
     },
     "abind": {
       "Package": "abind",
@@ -251,7 +263,7 @@
     },
     "broom": {
       "Package": "broom",
-      "Version": "1.0.12",
+      "Version": "1.0.9",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -268,7 +280,7 @@
         "tibble",
         "tidyr"
       ],
-      "Hash": "6cf2f6757591ea712c57c5d7bedc3c27"
+      "Hash": "e22a2be2b646fbc8e8c3cc8deefc01de"
     },
     "bslib": {
       "Package": "bslib",
@@ -343,13 +355,13 @@
     },
     "carData": {
       "Package": "carData",
-      "Version": "3.0-6",
+      "Version": "3.0-5",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "c7c7994c2f70d512b0016b6fb34c54e9"
+      "Hash": "ac6cdb8552c61bd36b0e54d07cf2aab7"
     },
     "cli": {
       "Package": "cli",
@@ -633,7 +645,7 @@
     },
     "forecast": {
       "Package": "forecast",
-      "Version": "9.0.1",
+      "Version": "8.24.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -651,11 +663,12 @@
         "parallel",
         "stats",
         "timeDate",
+        "tseries",
         "urca",
         "withr",
         "zoo"
       ],
-      "Hash": "0dc371e253fbaa8ce2257d584b11d4c2"
+      "Hash": "0f4ee6f4f1420d7780630bd6b0c3e280"
     },
     "fracdiff": {
       "Package": "fracdiff",
@@ -1023,7 +1036,7 @@
     },
     "lme4": {
       "Package": "lme4",
-      "Version": "1.1-38",
+      "Version": "1.1-37",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1032,7 +1045,6 @@
         "R",
         "Rcpp",
         "RcppEigen",
-        "Rdpack",
         "boot",
         "graphics",
         "grid",
@@ -1043,12 +1055,11 @@
         "nloptr",
         "parallel",
         "reformulas",
-        "rlang",
         "splines",
         "stats",
         "utils"
       ],
-      "Hash": "0a0abf28da4a31382cf6d523f2e1e3d1"
+      "Hash": "637ceb7665637edce9289dd763972704"
     },
     "lmtest": {
       "Package": "lmtest",
@@ -1441,6 +1452,32 @@
       ],
       "Hash": "0154ac5b9ef4df1a7be3a54602e781cf"
     },
+    "quadprog": {
+      "Package": "quadprog",
+      "Version": "1.5-8",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "5f919ae5e7f83a6f91dcf2288943370d"
+    },
+    "quantmod": {
+      "Package": "quantmod",
+      "Version": "0.4.28",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "TTR",
+        "curl",
+        "jsonlite",
+        "methods",
+        "xts",
+        "zoo"
+      ],
+      "Hash": "998e62a5735c2fe6b4a36b0d00e68b70"
+    },
     "quantreg": {
       "Package": "quantreg",
       "Version": "6.1",
@@ -1482,7 +1519,7 @@
     },
     "rbibutils": {
       "Package": "rbibutils",
-      "Version": "2.4.1",
+      "Version": "2.3",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1490,11 +1527,11 @@
         "tools",
         "utils"
       ],
-      "Hash": "92dd8158e4025e954fd06fcda0def88b"
+      "Hash": "dfc034a172fd88fc66b1a703894c4185"
     },
     "reformulas": {
       "Package": "reformulas",
-      "Version": "0.4.4",
+      "Version": "0.4.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1503,7 +1540,7 @@
         "methods",
         "stats"
       ],
-      "Hash": "f7f3d0b52f1eb2745d13ae785ec275d4"
+      "Hash": "697a42ea989da568a0251101f36a7632"
     },
     "renv": {
       "Package": "renv",
@@ -1762,7 +1799,7 @@
     },
     "timeDate": {
       "Package": "timeDate",
-      "Version": "4052.112",
+      "Version": "4051.111",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1772,7 +1809,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "3557f60ea69f7377b2706095fb34ad66"
+      "Hash": "ed2400152931480d09eeb28d678260d9"
     },
     "tinytex": {
       "Package": "tinytex",
@@ -1783,6 +1820,23 @@
         "xfun"
       ],
       "Hash": "03af3ad04817f3019de8ee5c73dab807"
+    },
+    "tseries": {
+      "Package": "tseries",
+      "Version": "0.10-58",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "graphics",
+        "jsonlite",
+        "quadprog",
+        "quantmod",
+        "stats",
+        "utils",
+        "zoo"
+      ],
+      "Hash": "f9269495a613f8e237f01691bf789ead"
     },
     "urca": {
       "Package": "urca",
@@ -1879,6 +1933,18 @@
         "rlang"
       ],
       "Hash": "d8e98d08a4a4d03f5052acc6e6204b99"
+    },
+    "xts": {
+      "Package": "xts",
+      "Version": "0.14.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "methods",
+        "zoo"
+      ],
+      "Hash": "be0d8259b62c520dac5097ad7ba9baea"
     },
     "yaml": {
       "Package": "yaml",

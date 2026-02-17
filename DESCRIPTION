@@ -10,15 +10,11 @@ Description: Safe enytime-valid inference with e-values
 License: GPL (>= 2)
 Encoding: UTF-8
 Imports:
-  BayesFactor,
-  car,
   ggplot2,
   jaspBase,
-  jaspGraphs,
-  logspline,
-  plotrix,
-  plyr
+  jaspGraphs
 Remotes:
   AlexanderLyNL/safestats@futility88,
   jasp-stats/jaspBase,
   jasp-stats/jaspGraphs
+RoxygenNote: 7.3.3
