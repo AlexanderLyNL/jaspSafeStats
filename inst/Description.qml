@@ -20,7 +20,6 @@ Description
 	{
         title:	qsTr("Design")
 	}
-
 	Analysis
 	{
         title: qsTr("Design object creation") // Title for window
@@ -45,9 +44,10 @@ Description
 
     /*GroupTitle
 	{
-	  title: qsTr("Plotting")
+		menu:	qsTr("Paired Samples T-Test")
+		title:	qsTr("Bayesian Paired Samples T-Test")
+		func:	"TTestBayesianPairedSamples"
 	}
-
 	Analysis
 	{
 	  title: qsTr("Plot a parabola")
