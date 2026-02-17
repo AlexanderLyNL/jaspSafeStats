@@ -3,46 +3,46 @@ import JASP.Module
 
 Description
 {
-	title		: qsTr("T-Tests")
-	description	: qsTr("Evaluate the difference between two means")
-	icon		: "analysis-classical-ttest.svg"
-	hasWrappers	: true
+    name		: "jaspSafeStats"
+    title		: qsTr("Safe Anytime-Valid Inference")
+    description	: qsTr("e-values")
+	version		: "0.1"
+    author		: "Alexander Ly, Sebastian Arias, Sebastian Arnold, Stephan Bongers, Michele Meziu, Angel Reyero Lobo, Dante de Roos, Peter Grunwald"
+    maintainer	: "Alexander Ly <a.ly@cwi.nl>"
+    website		: "https://github.com/AlexanderLyNL/jaspSafeStats/"
+    license		: "GPL (>= 2)"
+    icon        : "exampleIcon.png" // Located in /inst/icons/
+    preloadData : true
+	requiresData: true
+
 
 	GroupTitle
 	{
-		title:	qsTr("Classical")
-		icon:	"analysis-classical-ttest.svg"
+        title:	qsTr("Design")
 	}
 	Analysis
 	{
-		title:	qsTr("Independent Samples T-Test")
-		func:	"TTestIndependentSamples"
+        title: qsTr("Design object creation") // Title for window
+        menu: qsTr("Design object creation")  // Title for ribbon
+		func: "interfaceExample"           // Function to be called
+		qml: "Interface.qml"               // Design input window
+		requiresData: false                // Allow to run even without data
 	}
-	Analysis
-	{
-		title:	qsTr("Paired Samples T-Test")
-		func:	"TTestPairedSamples"
-	}
-	Analysis
-	{
-		title:	qsTr("One Sample T-Test")
-		func:	"TTestOneSample"
-	}
-
-	Separator{}
 
 	GroupTitle
 	{
-		title:	qsTr("Bayesian")
-		icon:	"analysis-bayesian-ttest.svg"
+        title:	qsTr("Analyses")
 	}
-	Analysis
-	{
-		menu:	qsTr("Independent Samples T-Test")
-		title:	qsTr("Bayesian Independent Samples T-Test")
-		func:	"TTestBayesianIndependentSamples"
-	}
-	Analysis
+
+    Analysis
+    {
+      title: qsTr("Loading data")
+      menu: qsTr("Loading data")
+      func: "processTable"
+      qml: "LoadingData.qml"
+    }
+
+    /*GroupTitle
 	{
 		menu:	qsTr("Paired Samples T-Test")
 		title:	qsTr("Bayesian Paired Samples T-Test")
@@ -50,8 +50,9 @@ Description
 	}
 	Analysis
 	{
-		menu:	qsTr("One Sample T-Test")
-		title:	qsTr("Bayesian One Sample T-Test")
-		func:	"TTestBayesianOneSample"
-	}
+	  title: qsTr("Plot a parabola")
+	  func: "parabola"
+	  qml: "Parabola.qml"
+	  requiresData: false
+    }*/
 }
