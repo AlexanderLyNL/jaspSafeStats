@@ -23,32 +23,22 @@ import JASP
 
 Form
 {
-  info: qsTr("This example shows how to load a dataset and output it as a table")
-
-  Text
-  {
-      text: "This example shows how to load a dataset and output it as a table"
-  }
+  info: qsTr("The one sample t-test allows you to estimate the effect size and test the null hypothesis that the population mean equals a specific constant, i.e., the test value.\n") +
+        "## " + "Assumptions" + "\n" + "- Continuous dependent variable.\n" + "- The data are a random sample from the population.\n" + "- The dependent variable is normally distributed in the population."
 
   VariablesForm
   {
-    AvailableVariablesList { name: "allVariables" }
-
-    AssignedVariablesList  {
-      name: "ts"
-      label: qsTr("Times (t)")
-      info: qsTr("This info entry adds documentation to the (i) icon in the analysis file. E.g., Specify variable containing the time.")
-      singleVariable: true
-      allowedColumns: ["scale"]
-    }
-
-    AssignedVariablesList  {
-      name: "xs"
-      label: qsTr("Positions (x)")
-      info: qsTr("This info entry adds documentation to the (i) icon in the analysis file. E.g., Specify variable containing the positions.")
-      singleVariable: true
-      allowedColumns: ["scale"]
-    }
+      infoLabel: qsTr("Input")
+      preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
+      AvailableVariablesList { name: "allVariablesList" }
+      AssignedVariablesList
+      {
+          name: "dependent"
+          title: qsTr("Variables")
+          info: qsTr("In this box the dependent variable is selected.")
+          allowedColumns: ["scale"]
+          minNumericLevels: 1
+      }
   }
 
   Section

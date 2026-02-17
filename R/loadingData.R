@@ -8,21 +8,21 @@ processTable <- function(jaspResults, dataset, options) {
   }
 
   # Only if everything has been assigned ...
-  if(.isAssigned(options$ts) && .isAssigned(options$xs)) {
+  if (.isAssigned(options$dependent)) {
     # ... print the inputs as a table
     stats <- createJaspTable(gettext("Some descriptives"))
-    stats$dependOn(c("ts", "xs")) # Declare dependencies to make the object disappear / reappear when needed
+    stats$dependOn(c("dependent")) # Declare dependencies to make the object disappear / reappear when needed
 
     stats$addColumnInfo(name = gettext("times"))
     stats$addColumnInfo(name = gettext("xs"))
 
-    stats[["times"]] <- dataset[[options$ts]]
-    stats[["xs"]] <- dataset[[options$xs]]
+    stats[["times"]] <- dataset[[options$dependent]]
+    # stats[["xs"]] <- dataset[[options$xs]]
 
     jaspResults[["stats"]] <- stats
   } else {
     expl <- createJaspHtml(text = "Select times and positions")
-    expl$dependOn(c("ts", "xs")) # Declare dependencies to make the object disappear / reappear when needed
+    expl$dependOn(c("dependent")) # Declare dependencies to make the object disappear / reappear when needed
 
     jaspResults[["Explanation"]] <- expl
   }

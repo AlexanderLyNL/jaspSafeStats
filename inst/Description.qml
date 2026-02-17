@@ -3,55 +3,47 @@ import JASP.Module
 
 Description
 {
-	name		: "jaspModuleTemplate"
-	title		: qsTr("Jasp Module")
-	description	: qsTr("Examples for module builders")
+    name		: "jaspSafeStats"
+    title		: qsTr("Safe Anytime-Valid Inference")
+    description	: qsTr("e-values")
 	version		: "0.1"
-	author		: "JASP Team"
-	maintainer	: "JASP Team <info@jasp-stats.org>"
-	website		: "https://jasp-stats.org"
-	license		: "GPL (>= 2)"
-	icon        : "exampleIcon.png" // Located in /inst/icons/
-	preloadData: true
+    author		: "Alexander Ly, Sebastian Arias, Sebastian Arnold, Stephan Bongers, Michele Meziu, Angel Reyero Lobo, Dante de Roos, Peter Grunwald"
+    maintainer	: "Alexander Ly <a.ly@cwi.nl>"
+    website		: "https://github.com/AlexanderLyNL/jaspSafeStats/"
+    license		: "GPL (>= 2)"
+    icon        : "exampleIcon.png" // Located in /inst/icons/
+    preloadData : true
 	requiresData: true
+
 
 	GroupTitle
 	{
-		title:	qsTr("Basic interactivity")
+        title:	qsTr("Design")
 	}
 
 	Analysis
 	{
-		title: qsTr("Using the interface") // Title for window
-		menu: qsTr("Using the interface")  // Title for ribbon
+        title: qsTr("Design object creation") // Title for window
+        menu: qsTr("Design object creation")  // Title for ribbon
 		func: "interfaceExample"           // Function to be called
 		qml: "Interface.qml"               // Design input window
 		requiresData: false                // Allow to run even without data
 	}
 
-	Analysis
-	{
-	  title: qsTr("Loading data")
-	  menu: qsTr("Loading data")
-	  func: "processTable"
-	  qml: "LoadingData.qml"
-	}
-
 	GroupTitle
 	{
-		title:	qsTr("Basic functions")
+        title:	qsTr("Analyses")
 	}
 
-	Analysis
-	{
-	  title: qsTr("Add one")        // Title for window
-	  menu: qsTr("Add one")         // Title for ribbon
-	  func: "addOne"                // Function to be called
-    qml: "AddOne.qml"            // Design input window
-	  requiresData: false           // Allow to run even without data
-	}
+    Analysis
+    {
+      title: qsTr("Loading data")
+      menu: qsTr("Loading data")
+      func: "processTable"
+      qml: "LoadingData.qml"
+    }
 
-	GroupTitle
+    /*GroupTitle
 	{
 	  title: qsTr("Plotting")
 	}
@@ -62,5 +54,5 @@ Description
 	  func: "parabola"
 	  qml: "Parabola.qml"
 	  requiresData: false
-	}
+    }*/
 }

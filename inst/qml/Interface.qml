@@ -60,6 +60,7 @@ Form
 
 			RadioButton { value: "one value"; label: qsTr("One"); checked: true } // Single-line definition is also possible
 			RadioButton { value: "another value"; label: qsTr("Another") }
+            RadioButton { value: "another value"; label: qsTr("Another 2") }
 		}
 	}
 
