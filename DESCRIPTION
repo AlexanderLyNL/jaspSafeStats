@@ -1,12 +1,12 @@
 Package: jaspSafeStats
 Type: Package
-Title: Safe Stats Module for JASP
+Title: safestats Module for JASP
 Version: 0.1.0
 Date: 2026-02-16
-Author: CWI
+Author: Alexander Ly, Sebastian Arias, Sebastian Arnold, Stephan Bongers, Michele Meziu, Angel Reyero Lobo, Dante de Roos, Yongqi Wang, Peter Grunwald
 Website: https://github.com/alexanderlynl/safestats/
 Maintainer: Alexander Ly <a.ly@cwi.nl>
-Description: Evaluate the difference between two means
+Description: Safe enytime-valid inference with e-values
 License: GPL (>= 2)
 Encoding: UTF-8
 Imports:
