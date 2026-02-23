@@ -14,13 +14,16 @@ oneSampleTTableMain <- function(jaspResults, dataset, options, ready) {
   # Create table
   mainTable <- createJaspTable(gettext("SAVI One-Sample T-Test"))
   mainTable$dependOn(c("dependent"))
-  mainTable$addCitation("Ly et al. (2026). safestats (Version 0.8.8) [Computer software].")
+  mainTable$addCitation(
+    paste0("Ly, A, Arias, S, Arnold, S, Bongers, S, Meziu, M, Lobo, AR, ",
+           "de Roos, D, Wang, Y, Grunwald, P (2026). ",
+           "safestats (Version 0.8.8) [Computer software]."))
 
   # binomialTable$showSpecifiedColumnsOnly <- TRUE
 
   # Add columns to table
   mainTable$addColumnInfo(name="variable", title=gettext("Variable"), type="string", combine=TRUE)
-  mainTable$addColumnInfo(name="statistic", title=gettext("Stat"), type="number")
+  mainTable$addColumnInfo(name="statistic", title=gettext("t"), type="number")
   mainTable$addColumnInfo(name="n", title=gettext("Sample Size"), type="integer")
   mainTable$addColumnInfo(name="eValue", title=gettext("e-value"), type="number")
 
